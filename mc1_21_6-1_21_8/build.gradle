@@ -18,19 +18,19 @@ def version_suffix = '1.21.6-1.21.8'
 dependencies {
     minecraft "com.mojang:minecraft:1.21.8"
     mappings "net.fabricmc:yarn:1.21.8+build.1:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.16.10"
+    modImplementation "net.fabricmc:fabric-loader:0.17.2"
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.136.1+1.21.8"
 }
 
 processResources {
     inputs.property 'version', project.version
-    inputs.property 'loader_version', '0.16.10'
+    inputs.property 'loader_version', '0.17.2'
     inputs.property 'minecraft_version_range', '>=1.21.6 <=1.21.8'
     filteringCharset 'UTF-8'
 
     filesMatching('fabric.mod.json') {
         expand 'version': project.version,
-                'loader_version': '0.16.10',
+                'loader_version': '0.17.2',
                 'minecraft_version_range': '>=1.21.6 <=1.21.8'
     }
 
